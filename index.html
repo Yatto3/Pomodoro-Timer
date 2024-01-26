@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="./public/style/style.css">
+    <link rel="shortcut icon" href="./public/img/icons8-done-64.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="./files/buttons.js" defer></script>
+    <script src="./files/elements.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./public/img/icons8-done-64.png" alt="">
+                <p>Pomodoro</p>
+            </div>
+            <div class="progress-bar">
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="timer-container">
+            <div class="timer-setting">
+                <button  data-pomo class="foccus">Pomodoro</button>
+                <button data-shortBreak>Short Break</button>
+                <button data-longBreak>Long Break</button>
+            </div>
+            <div class="time">
+                <h1><span data-min>25 </span>:<span data-s> 00</span></h1>
+            </div>
+            <div class="start-button">
+                <button data-start>START</button>
+            </div>
+
+        </div>
+        <div class="current-task">
+            <p>#Current Task</p>
+            <p>Time to Focus!</p>
+        </div>
+        <div class="task-container">
+            <div class="header">
+                <h4>Task</h4>
+                <div class="options-container">
+                    <div class="options">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="underline"></div>
+            <div class="toDo-container" data-container>
+
+            </div>
+            <div class="add-task" data-addTask>
+                <button >Add Task</button>
+            </div>
+            <div class="task-sheet hide" data-taskSheet>
+                <div class="task-input">
+                    <input type="text" placeholder="What are you working on ?" data-taskInput>
+                </div>
+                <p>Est Pomodoros</p>
+                <div class="pomodoros">
+                    <input type="number" value="0" data-pomedoroInput>
+                    <div class="buttons">
+                        <button data-addPomo><img src="./public/img/up.png" alt="add-pomedoro" ></button>
+                        <button data-decreasePomo><img src="public/img/down.png" alt="decreases-pomedoro"></button>
+                    </div>
+                </div> 
+                <div class="add-note">
+                     <div data-note class="note hide">
+                        <textarea placeholder="Some notes..." data-notes></textarea>
+                     </div>
+                    <p data-addNote>+ Add Note</p>
+                </div>
+                <div class="footer">
+                    <button data-cancel>Cancel</button>
+                    <button data-save>Save</button>
+                </div>
+            </div>
+            <div class="estimated-pomos">
+                <p>Pomos: <span data-pomoDone>0</span> / <span data-totalPomos>0</span></p>
+                <p>Finish At: <span data-hours>00</span> : <span data-minutes>00</span> <span>(0h)</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="info-container">
+        <div class="info">
+            <section>
+                <h1>An online Pomodoro Timer to boost your productivity</h1>
+            </section>
+            <section>
+                <h3>What is Pomodoro Timer?</h3><br>
+                <p>Pomodoro Timer is a customizable pomodoro timer that works on desktop & mobile browser. The aim of this app is to help you focus on any task you are working on, such as study, writing, or coding. This app is inspired by <span onclick="window.open('https://pomofocus.io ')">Pomodoro Technique</span> which is a time management method developed by Francesco Cirillo.</p>
+            </section>
+            <section>
+                <h3>What is Pomodoro Technique?</h3><br>
+                <p>
+                    The Pomodoro Technique is created by Francesco Cirillo for a more productive way to work and study. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for 'tomato', after the tomato-shaped kitchen timer that
+                     Cirillo used as a university student. - <span onclick="window.open('https://en.wikipedia.org/wiki/Pomodoro_Technique')">Wikipedia</span>
+                </p>
+            </section>
+            <section>
+                <h3>How to use the Pomodoro Timer?</h3><br>
+                <p>
+                    <ol id="number-type">
+                        <li><span>Add tasks</span> to work on today</li>
+                        <li><span>Set estimate pomodoros</span> (1 = 25min of work) for each tasks</li>
+                        <li><span>Select a task</span> on</li>
+                        <li><span>Start timer</span> and focus on the task for 25 minutes</li>
+                        <li><span>Take a break</span> for 5 minutes when the alarm ring</li>
+                        <li><span>Iterate </span>3-5 until you finish the tasks</li>
+                    </ol>
+                </p>
+            </section>     
+            <section>
+                <h3>Basic Features</h3><br>
+                <p>
+                    <ul>
+                        <li> <span>Estimate Finish Time:</span> Get an estimate of the time required to complete your daily tasks.</li>
+                        <li> <span>Add Templates:</span> Save your repetitive tasks as templates and add them with just one click.</li>
+                        <li> <span>Visual Reports:</span> See how much time you've focused each day, week, and month.</li>
+                        <li> <span>Custom Settings:</span> Personalize your focus/break time, alarm sounds, background sounds, and more</li>
+                    </ul>
+                </p>
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="directions">
+            <button>HOME</button>
+            <button>PRIVACY</button>
+            <button>TERMS</button>
+            <button>CONTACT</button>
+            <button>SIMPLE PAGE</button>
+        </div>
+        <div class="socials">
+            <img src="./public/img/icons8-телеграм-50.png" alt="telegram" draggable="false" onclick="window.location.href = 'tg://resolve?domain=I9jdecUD'">
+            <img src="./public/img/icons8-instagram-50.png" alt="instagram"draggable="false" onclick="window.open('https://www.instagram.com/ujst5r1/')">
+            <img src="./public/img/icons8-github-50.png" alt=github" draggable="false" onclick="window.open('https://github.com/Yatto3')">
+        </div>
+        <div class="ps">
+            <p>Made with <:3 by <span>Platonov Mihail</span> </p>
+        </div>
+    </footer>
+</body>
+</html>
